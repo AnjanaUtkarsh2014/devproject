@@ -1,9 +1,12 @@
 package com.redsky.product.service.api;
 
-import com.redsky.product.modal.ProductDetails;
+import com.redsky.product.controller.dto.ProductDto;
 
 import java.util.List;
 
 public interface ProductService {
-  List<ProductDetails> getProductDetails();
+    ProductDto getProduct(Integer productId);
+
+    String saveProduct(List<ProductDto> productDtoList);
+
 }
