@@ -1,12 +1,13 @@
 package com.redsky.product.controller.api;
 
-import com.redsky.product.modal.ProductDetails;
-import com.redsky.product.service.api.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.redsky.product.controller.dto.ProductDto;
 
 import java.util.List;
 
 public interface ProductRestful {
 
-    List<ProductDetails> getProductDetails();
+    String getProduct(Integer productId);
+
+    String saveProduct(List<ProductDto> productDto);
+
 }
