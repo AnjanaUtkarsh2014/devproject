@@ -2,6 +2,7 @@ package com.retail.product.controller.impl;
 
 import com.retail.product.client.api.ProductPriceClientService;
 import com.retail.product.controller.api.RetailProductRestful;
+import com.retail.product.controller.dto.ProductCurrentPriceDto;
 import com.retail.product.controller.dto.ProductDetailsDto;
 import com.retail.product.controller.dto.ProductPriceDto;
 import com.retail.product.service.api.ProductPriceService;
@@ -30,12 +31,15 @@ public class RetailProductRestfulImpl implements RetailProductRestful {
         ProductDetailsDto productDetailsDto = new ProductDetailsDto();
         //get product price details
         ProductPriceDto productPriceDto = productPriceService.getProductPrice(productId);
+        ProductCurrentPriceDto productCurrentPriceDto=new ProductCurrentPriceDto();
+        productCurrentPriceDto.setCurrency_code(productPriceDto.getCurrency_code());
+        productCurrentPriceDto.setValue(productPriceDto.getValue());
         //call product name from redsky
         String productName = productPriceClientService.getProductName(productId);
         //forming response
-        productDetailsDto.setProductId(productId);
-        productDetailsDto.setProductName(productName);
-        productDetailsDto.setCurrent_price(productPriceDto);
+        productDetailsDto.setId(productId);
+        productDetailsDto.setName(productName);
+        productDetailsDto.setCurrent_price(productCurrentPriceDto);
         return productDetailsDto;
     }
 

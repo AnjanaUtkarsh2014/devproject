@@ -14,7 +14,6 @@ public class ProductPriceDto {
     @NotEmpty(message = "Currency code can not be blank")
     private String currencyCode;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     public int getId() {
         return productId;
     }
