@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "redssky",
+		"_postman_id": "0717a8b9-5776-7f23-d4f7-b0f855e34194",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Product Name",
+			"request": {
+				"url": "http://localhost:8082/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":13860428,\"name\":\"The Big Lebowski (Blu-ray) (Widescreen)\"},{\"id\":54456119,\"name\":\"LCD\"},{\"id\":13264003,\"name\":\"DVD\"},{\"id\":12954218,\"name\":\"LED\"}]\r\n"
+				},
+				"description": "postproduct"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Name",
+			"request": {
+				"url": "http://localhost:8082/product/13860428",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "postproduct"
+			},
+			"response": []
+		}
+	]
+}

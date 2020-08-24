@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "retail",
+		"_postman_id": "b612fe53-6c74-7803-797c-c54d6a2352ca",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Price detail",
+			"request": {
+				"url": "http://localhost:8081/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"value\":1000,\"id\":13860428,\"currency_code\":\"USD\"},{\"value\":2000,\"id\":13264003,\"currency_code\":\"INR\"},{\"value\":3000,\"id\":54456119,\"currency_code\":\"EUR\"},{\"value\":4000,\"id\":12954218,\"currency_code\":\"JPY\"}]\r\n"
+				},
+				"description": "post price"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Details",
+			"request": {
+				"url": "http://localhost:8081/products/13860428",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"value\":0,\"id\":1,\"currency_Code\":\"in\"},{\"value\":0,\"id\":2,\"currency_Code\":\"in\"}]\r\n"
+				},
+				"description": "GET Product Details"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update price",
+			"request": {
+				"url": "http://localhost:8081/products/13860428",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"value\":-1,\"id\":13860428,\"currency_code\":\"\"}"
+				},
+				"description": "GET Product Details"
+			},
+			"response": []
+		}
+	]
+}

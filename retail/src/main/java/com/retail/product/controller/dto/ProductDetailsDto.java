@@ -3,13 +3,13 @@ package com.retail.product.controller.dto;
 public class ProductDetailsDto {
     private int productId;
     private String productName;
-    private ProductPriceDto productPriceDto;
+    private ProductCurrentPriceDto productCurrentPriceDto;
 
     public int getId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setId(int productId) {
         this.productId = productId;
     }
 
@@ -17,15 +17,15 @@ public class ProductDetailsDto {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    public void setName(String productName) {
         this.productName = productName;
     }
 
-    public ProductPriceDto getCurrent_price() {
-        return productPriceDto;
+    public ProductCurrentPriceDto getCurrent_price() {
+        return productCurrentPriceDto;
     }
 
-    public void setCurrent_price(ProductPriceDto productPriceDto) {
-        this.productPriceDto = productPriceDto;
+    public void setCurrent_price(ProductCurrentPriceDto productCurrentPriceDto) {
+        this.productCurrentPriceDto = productCurrentPriceDto;
     }
 }
